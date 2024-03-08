@@ -4,15 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f7f3e6"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/layout_header"
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/layout_banner"
+        layout="@layout/layout_banner"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginVertical="18dp"
+        android:elevation="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_header" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/desc_bg_category_title"
+        android:src="@drawable/bg_radius_title"
+        app:layout_constraintBottom_toTopOf="@id/rv_category"
+        app:layout_constraintStart_toStartOf="@id/tv_category_title"
+        app:layout_constraintTop_toTopOf="@id/tv_category_title" />
+
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_category_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="5dp"
+        android:text="@string/text_category_title"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/layout_banner" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:clipToPadding="true"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_category_title"
+        tools:listitem="@layout/item_category" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/desc_bg_catalog_title"
+        android:src="@drawable/bg_radius_title"
+        app:layout_constraintBottom_toTopOf="@id/rv_catalog"
+        app:layout_constraintStart_toStartOf="@id/tv_catalog_title"
+        app:layout_constraintTop_toTopOf="@id/tv_catalog_title" />
+
+    <TextView
+        android:id="@+id/tv_catalog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="5dp"
+        android:text="@string/text_catalog_title"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/rv_category" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="@string/desc_icon_list"
+        android:src="@drawable/ic_list"
+        app:layout_constraintBottom_toBottomOf="@id/tv_catalog_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_catalog_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_catalog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="8dp"
+        android:paddingTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tv_catalog_title"
+        app:spanCount="2"
+        tools:listitem="@layout/item_catalog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
