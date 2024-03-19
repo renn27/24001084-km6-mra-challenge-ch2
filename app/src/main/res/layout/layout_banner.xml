@@ -24,12 +24,12 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="16dp">
+            android:padding="4dp">
 
             <ImageView
                 android:id="@+id/iv_icon_banner"
                 android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img_discount"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -41,16 +41,16 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                android:layout_marginTop="30dp"
                 android:ellipsize="end"
                 android:maxLines="2"
+                android:layout_marginTop="24dp"
                 android:text="@string/text_title_banner"
                 android:textColor="@color/black"
-                android:textSize="28sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/iv_icon_banner"
-                app:layout_constraintTop_toTopOf="@id/iv_icon_banner" />
+                app:layout_constraintTop_toTopOf="@id/iv_icon_banner"/>
 
             <TextView
                 android:id="@+id/tv_desc_banner"
@@ -65,7 +65,7 @@
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/iv_icon_banner"
-                app:layout_constraintTop_toBottomOf="@id/tv_title_banner" />
+                app:layout_constraintTop_toBottomOf="@id/tv_title_banner"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </FrameLayout>

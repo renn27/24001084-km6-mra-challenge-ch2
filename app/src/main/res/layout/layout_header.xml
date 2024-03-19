@@ -7,11 +7,11 @@
     <ImageView
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:contentDescription="@string/desc_bg_name_header"
         android:scaleType="centerCrop"
         android:src="@drawable/bg_radius_header"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/desc_bg_name_header" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_name"
@@ -41,26 +41,5 @@
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_name" />
-
-    <ImageView
-        android:id="@+id/iv_cart"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/ic_cart"
-        app:layout_constraintBottom_toBottomOf="@id/tv_greeting"
-        app:layout_constraintEnd_toStartOf="@id/iv_profile"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/desc_icon_cart" />
-
-    <ImageView
-        android:id="@+id/iv_profile"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/ic_profile"
-        app:layout_constraintBottom_toBottomOf="@id/tv_greeting"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/desc_icon_profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

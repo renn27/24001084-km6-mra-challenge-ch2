@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="app_color_primary">#FC1C6B</color>
+    <color name="app_color_primary">#FF8300</color>
     <color name="app_color_on_primary">#FFFFFF</color>
     <color name="app_color_primary_container">#FF9CBD</color>
     <color name="app_color_on_primary_container">#36404B</color>
